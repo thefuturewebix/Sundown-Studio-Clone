@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "gilroy";
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+/* #main{
+    width: 100vw;
+    height: 100vh;
+    background-color: lightseagreen;
+}
+#page1{
+    width: 100vw;
+    height: 100vh;
+    background-color: salmon;
+} */
+#page2{
+    /* padding: 50px; */
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(232, 222, 206);
+    border-bottom: 2px solid black;
+}
+#page2 #left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: relative;
+    width: 70%;
+    height: 100%;
+    padding: 30px 100px;
+    /* background-color: red; */
+    
+}
+#page2 #left h1{
+    font-size: 62px;
+    font-weight: 700;
+    z-index: 99;
+    /* background-color: red; */
+}
+#page2 #left #proj{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    width: 250px;
+    padding: 2px 10px;
+    /* background-color: green; */
+    font-size: 24px;
+    z-index: 99;
+    margin-top: 150px;
+    margin-left: -10%;    
+}
+#page2 #left #proj i{
+    font-size: 18px;
+    color: rgb(255, 17, 0);
+}
+#page2 #left #proj h5{
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+#page2 #right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    width: 30%;
+    height: 100%;
+    padding: 40px;
+    /* background-color: blue; */
+}
+#page2 #right #image{
+    width: 80%;
+    height: 35%;
+    background-image: url(./media/64d3dd9edfb41666c35b15d1_Holding_thumb.webp);
+    background-position: 50% 50%;
+    background-size: cover;
+    border-radius: 10px;
+}
+#page2 #right h6{
+    font-size: 17px;
+    font-weight: 400;
+}
+#page2 #suneffect{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background : radial-gradient(red,rgb(255, 115, 0));
+    position: absolute;
+    filter: blur(15px);
+    animation-name: sunupright;
+    animation-duration: 2s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    box-shadow: 10px 20px 10px 2px orangered;
+    animation-timing-function: linear;
+    z-index: 1;
+}
+#page3{
+    width: 100vw;
+    height: 100vh;
+    background-color:  rgb(232, 222, 206);
+}
+#page3 .elme{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 17%;
+    /* padding: 0 50px; */
+    text-transform: uppercase;
+    /* background-color: aqua; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.664);
+    overflow: hidden;
+    transition: 0.5s;
+}
+#page3 .elme h1{
+    font-size: 50px;
+    margin-left: 50px;
+    z-index: 99;
+}
+#page3 .elme #righttxt{
+    z-index: 99;
+}
+#page3 .elme h3{
+    font-size: 15px;
+    font-weight: 500;
+    margin-right: 50px;
+    z-index: 999;
+}
+#page3 .elme .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 153, 0);
+    z-index: 1;
+    top: -100%;
+}
+#page3 .elme:hover .overlay{
+    animation-name: txthover;
+    animation-duration: .2s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+#fixedimage{
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    height: 480px;
+    width: 400px;
+    background-color: red;
+    border-radius: 10px;
+    display: none;
+}
+
+/* page2 Animation */
+@keyframes sunupright{
+    from{
+        top:40%;
+        left: 20%;
+        transform: translate(-20%,-20%) skew(0deg);
+    }
+    to{
+        top: 30%;
+        left: 21%;
+        transform: translate(20%,-20%) skew(10deg);
+    }
+}
+
+/* page3 Animation */
+@keyframes txthover{
+    from{
+        top: -100%;
+    }
+    to{
+        top: 0%;
+    }
+}
